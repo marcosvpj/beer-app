@@ -1,0 +1,16 @@
+<ion-view view-title="Beers">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="beer in beers" type="item-text-wrap" href="#/tab/beers/{{beer.id}}">
+        <img ng-src="{{beer.image}}">
+        <h2>!{{beer.name}}</h2>
+        <p>{{beer.type}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(beer)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
